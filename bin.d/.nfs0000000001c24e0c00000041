@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+"$mod_ranger_sw/ranger.py" --confdir "$mod_ranger_root/ranger-config" "$@"

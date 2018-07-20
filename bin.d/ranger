@@ -2,4 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-"$mod_ranger_sw/ranger.py" --confdir "$mod_ranger_root/ranger-config" "$@"
+if [[ $mod_ranger_cdfile ]]; then
+    "$mod_ranger_sw/ranger.py" --confdir "$mod_ranger_root/ranger-config" --choosedir="$mod_ranger_cdfile" "$@"
+else
+    "$mod_ranger_sw/ranger.py" --confdir "$mod_ranger_root/ranger-config" "$@"
+fi
