@@ -9,7 +9,6 @@ alias rr=ranger
 alias rcd='ranger-cd'
 
 export mod_ranger_cdfile="$(mktemp -t rrcd.XXXXXX)"
-log_error "mod_ranger_cdfile: '$mod_ranger_cdfile'"
 
 rrcd() {
     local dir="$( cat "${mod_ranger_cdfile:-$(pwd)}" )"
