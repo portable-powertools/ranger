@@ -1,9 +1,8 @@
 PATH_add "$mod_ranger_sw"
-PATH_add "$mod_ranger_root/bin.d"
 export mod_ranger_root
 export mod_ranger_sw
 
-RANGER_LOAD_DEFAULT_RC=FALSE
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
 alias rr=ranger
 alias rcd='ranger-cd'
